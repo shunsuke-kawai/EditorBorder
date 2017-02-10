@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EditorBorder.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:effects="clr-namespace:EditorBorder.Effects;assembly=EditorBorder"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="MainPage"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout Margin="20">
+        <Entry Text="標準のEntry" />
+        <Entry Text="EffectしたEntry">
+            <Entry.Effects>
+                <effects:BorderEffect />
+            </Entry.Effects>
+        </Entry>
+        <Editor HeightRequest="150">
+            <Editor.Effects>
+                <effects:BorderEffect />
+            </Editor.Effects>
+        </Editor>
+    </StackLayout>
+</ContentPage>
